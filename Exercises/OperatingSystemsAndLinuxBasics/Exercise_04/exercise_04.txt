@@ -1,0 +1,3 @@
+EXERCISE 4: Bash Script - User Processes Sorted
+Extend the previous script to ask for a user input for sorting the processes output either by memory or CPU consumption,
+and print the sorted list.
