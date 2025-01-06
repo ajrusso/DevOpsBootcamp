@@ -1,0 +1,3 @@
+EXERCISE 7: Bash Script - Node App Check Status
+Extend the script from exercise 6 to check after running the application that the application has successfully started
+and prints out the application's running process and the port where it's listening.
