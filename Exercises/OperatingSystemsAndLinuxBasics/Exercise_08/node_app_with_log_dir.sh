@@ -1,7 +1,7 @@
 #!/bin/bash
 
 APP_NAME="server.js"
-APP_PATH="./package/$app_name"
+APP_PATH="./package/$APP_NAME"
 
 # Outputs the applications PID and port number
 get_port_num() {
@@ -64,7 +64,7 @@ export LOG_DIR="$LOG_DIRECTORY"
 npm install
 
 # Start the Node application
-node server.js &
+node "$APP_NAME" &
 
 sleep 1 
 
