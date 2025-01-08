@@ -1,0 +1,19 @@
+##########################
+# Version Control w/ Git #
+##########################
+
+# Ignore IntelliJ idea directory
+/Exercises/VersionControlWithGit/Exercises/git-exercises/.idea/
+
+# Ignore DS Store
+/Exercises/VersionControlWithGit/Exercises/git-exercises/.DS_Store
+
+# Ignore Gradle build folders
+/Exercises/VersionControlWithGit/Exercises/git-exercises/build/
+
+# Ignore Gradle cache files
+/Exercises/VersionControlWithGit/Exercises/git-exercises/.gradle/
+
+# Ignore Gradle wrapper files
+/Exercises/VersionControlWithGit/Exercises/git-exercises/gradle/wrapper/
+
