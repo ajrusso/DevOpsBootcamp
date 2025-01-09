@@ -14,5 +14,16 @@ You see that build folders and editor specific folders are in the repository and
 
 Ignore .idea folder, .DS_Store, out and build folders
 
-
 Hint: remove from git cache first
+
+
+EXERCISE 4 - Bugfix branch
+You find out there is a bug in your project, so you need to fix it using a new bugfix branch:
+
+Create a new bugfix branch
+Fix the spelling error in Application.java file
+You are done with the changes. So:
+
+Check your changes using "git diff" and
+Commit them if everything is correct.
+Push your changes to your remote repository.
