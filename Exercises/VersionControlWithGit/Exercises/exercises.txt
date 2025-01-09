@@ -14,7 +14,6 @@ You see that build folders and editor specific folders are in the repository and
 
 Ignore .idea folder, .DS_Store, out and build folders
 
-
 Hint: remove from git cache first
 
 
@@ -30,3 +29,30 @@ Commit them if everything is correct.
 Note: There is a standard in your team to name commits with descriptive text.
 
 Push your changes to your remote repository.
+
+
+EXERCISE 4 - Bugfix branch
+You find out there is a bug in your project, so you need to fix it using a new bugfix branch:
+
+Create a new bugfix branch
+Fix the spelling error in Application.java file
+You are done with the changes. So:
+
+Check your changes using "git diff" and
+Commit them if everything is correct.
+Push your changes to your remote repository.
+
+
+EXERCISE 5: Merge request
+You are done with the feature, now it needs to be tested and deployed. So:
+
+Merge your feature branch into master (using a merge request)
+
+
+EXERCISE 6: Fix merge conflict
+You are on the bugfix branch. You notice the logger library version is old, so:
+
+Update it to version 7.2 (Change the same location in bugfix branch)
+Some time went by since you opened your bugfix branch, so you want the up-to-date master state to avoid major conflicts.
+
+Merge the master branch in your bugfix branch - fix the merge conflict!
