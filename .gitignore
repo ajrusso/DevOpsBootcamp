@@ -1,4 +1,5 @@
 /Handouts/
+/.vscode/
 
 ##########################
 # Version Control w/ Git #
@@ -19,3 +20,15 @@
 # Ignore Gradle wrapper files
 /Exercises/VersionControlWithGit/Exercises/git-exercises/gradle/wrapper/
 
+#######################################
+# Build Tools & Package Manager Tools #
+#######################################
+
+# Ignore IntelliJ idea directory
+/Exercises/BuildToolsAndPackageManager/build-tools-exercises/.idea/
+
+# Ignore Gradle cache files
+/Exercises/BuildToolsAndPackageManager/build-tools-exercises/.gradle/
+
+# Ignore Gradle build folders
+/Exercises/BuildToolsAndPackageManager/build-tools-exercises/build/

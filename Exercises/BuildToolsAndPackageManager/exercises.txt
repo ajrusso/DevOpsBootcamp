@@ -1,0 +1,21 @@
+Exercises for Module "Build Tools and Package Manager"
+
+Use repository: https://gitlab.com/twn-devops-bootcamp/latest/04-build-tools/build-tools-exercises
+
+
+Your team wants to build out a small helper library in Java and ask you to take over the project.
+
+
+
+EXERCISE 0: Clone project and create own Git repository
+To work with the project for the exercises:
+
+Clone the project and
+create your own project/git repository from it
+
+
+EXERCISE 1: Build jar artifact
+You want to deploy the artifact to share that library with all team members. So:
+
+try to build the jar file
+The Build will fail, because of a compile error in a test, so you can't build the jar.
