@@ -19,3 +19,22 @@ You want to deploy the artifact to share that library with all team members. So:
 
 try to build the jar file
 The Build will fail, because of a compile error in a test, so you can't build the jar.
+
+
+EXERCISE 2: Run tests
+Fix the test, by changing "true" string to true boolean.
+Run gradle test to execute only the tests and check the fix.
+
+
+EXERCISE 3: Clean and build App
+You fixed the test. Now:
+
+clean the build folder with gradle clean and
+try to build jar file again.
+
+
+EXERCISE 4: Start application
+Start the jar file to test that the application runs successfully as a jar file
+
+Start app with /build/libs java -jar app-1.0.jar
+NOTE: replace "app-1.0.jar" with the name of YOUR jar file.
