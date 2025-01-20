@@ -41,7 +41,7 @@
 /Exercises/CloudAndIaasBasics/cloud-basics-exercises/.idea
 
 # Ignore NodeJs Dependancies directory
-/Exercises/CloudAndIaasBasics/cloud-basics-exercisesapp/node_modules
+/Exercises/CloudAndIaasBasics/cloud-basics-exercises/app/node_modules
 
 # Ignore DS Store
 /Exercises/CloudAndIaasBasics/cloud-basics-exercises/*.DS_Store
