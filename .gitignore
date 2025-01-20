@@ -32,3 +32,21 @@
 
 # Ignore Gradle build folders
 /Exercises/BuildToolsAndPackageManager/build-tools-exercises/build/
+
+#######################
+# Cloud & IaaS Basics # 
+#######################
+
+# Ignore IntelliJ idea directory
+/Exercises/CloudAndIaasBasics/cloud-basics-exercises/.idea
+
+# Ignore NodeJs Dependancies directory
+/Exercises/CloudAndIaasBasics/cloud-basics-exercises/app/node_modules
+
+# Ignore DS Store
+/Exercises/CloudAndIaasBasics/cloud-basics-exercises/*.DS_Store
+
+# Ignore NodeJs compressed archive file
+/Exercises/CloudAndIaasBasics/cloud-basics-exercises/app/*tgz
+
+
