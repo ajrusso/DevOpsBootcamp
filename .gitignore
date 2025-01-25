@@ -46,16 +46,16 @@
 ########################################
 
 # Ignore DS Store
-/Exercises/ArtifactRepoManagerWithNexus/java-app/.DS_Store
+/Exercises/ArtifactRepoManagerWithNexus/java-gradle-app/.DS_Store
 
 # Ignore Gradle build folders
-/Exercises/ArtifactRepoManagerWithNexus/java-app/build/
+/Exercises/ArtifactRepoManagerWithNexus/java-gradle-app/build/
 
 # Ignore Gradle cache files
-/Exercises/ArtifactRepoManagerWithNexus/java-app/.gradle/
+/Exercises/ArtifactRepoManagerWithNexus/java-gradle-app/.gradle/
 
 # Ignore Gradle properties
-/Exercises/ArtifactRepoManagerWithNexus/java-app/gradle.properties
+/Exercises/ArtifactRepoManagerWithNexus/java-gradle-app/gradle.properties
 
 # Ignore Gradle build config
-/Exercises/ArtifactRepoManagerWithNexus/java-app/build.gradle 
+/Exercises/ArtifactRepoManagerWithNexus/java-gradle-app/build.gradle 
