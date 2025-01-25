@@ -1,12 +1,10 @@
 /Handouts/
 /.vscode/
+/.idea/
 
 ##########################
 # Version Control w/ Git #
 ##########################
-
-# Ignore IntelliJ idea directory
-/Exercises/VersionControlWithGit/Exercises/git-exercises/.idea/
 
 # Ignore DS Store
 /Exercises/VersionControlWithGit/Exercises/git-exercises/.DS_Store
@@ -24,9 +22,6 @@
 # Build Tools & Package Manager Tools #
 #######################################
 
-# Ignore IntelliJ idea directory
-/Exercises/BuildToolsAndPackageManager/build-tools-exercises/.idea/
-
 # Ignore Gradle cache files
 /Exercises/BuildToolsAndPackageManager/build-tools-exercises/.gradle/
 
@@ -37,9 +32,6 @@
 # Cloud & IaaS Basics # 
 #######################
 
-# Ignore IntelliJ idea directory
-/Exercises/CloudAndIaasBasics/cloud-basics-exercises/.idea
-
 # Ignore NodeJs Dependancies directory
 /Exercises/CloudAndIaasBasics/cloud-basics-exercises/app/node_modules
 
@@ -49,4 +41,21 @@
 # Ignore NodeJs compressed archive file
 /Exercises/CloudAndIaasBasics/cloud-basics-exercises/app/*tgz
 
+########################################
+# Artifact Repository Manager w/ Nexus #
+########################################
 
+# Ignore DS Store
+/Exercises/ArtifactRepoManagerWithNexus/java-app/.DS_Store
+
+# Ignore Gradle build folders
+/Exercises/ArtifactRepoManagerWithNexus/java-app/build/
+
+# Ignore Gradle cache files
+/Exercises/ArtifactRepoManagerWithNexus/java-app/.gradle/
+
+# Ignore Gradle properties
+/Exercises/ArtifactRepoManagerWithNexus/java-app/gradle.properties
+
+# Ignore Gradle build config
+/Exercises/ArtifactRepoManagerWithNexus/java-app/build.gradle 
