@@ -32,7 +32,7 @@
 # Cloud & IaaS Basics # 
 #######################
 
-# Ignore NodeJs Dependancies directory
+# Ignore NodeJs dependancies directory
 /Exercises/CloudAndIaasBasics/cloud-basics-exercises/app/node_modules
 
 # Ignore DS Store
@@ -58,4 +58,7 @@
 /Exercises/ArtifactRepoManagerWithNexus/java-gradle-app/gradle.properties
 
 # Ignore Gradle build config
-/Exercises/ArtifactRepoManagerWithNexus/java-gradle-app/build.gradle 
+/Exercises/ArtifactRepoManagerWithNexus/java-gradle-app/build.gradle
+
+# Ignore Maven build output
+/Exercises/ArtifactRepoManagerWithNexus/java-maven-app/target/
