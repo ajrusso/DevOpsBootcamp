@@ -9,7 +9,7 @@
 # Ignore DS Store
 /Exercises/VersionControlWithGit/Exercises/git-exercises/.DS_Store
 
-# Ignore Gradle build folders
+# Ignore Gradle build directory
 /Exercises/VersionControlWithGit/Exercises/git-exercises/build/
 
 # Ignore Gradle cache files
@@ -25,8 +25,11 @@
 # Ignore Gradle cache files
 /Exercises/BuildToolsAndPackageManager/build-tools-exercises/.gradle/
 
-# Ignore Gradle build folders
+# Ignore Gradle build directory
 /Exercises/BuildToolsAndPackageManager/build-tools-exercises/build/
+
+# Ignore Gradle binary directory
+/Exercises/BuildToolsAndPackageManager/build-tools-exercises/bin/
 
 #######################
 # Cloud & IaaS Basics # 
@@ -48,7 +51,7 @@
 # Ignore DS Store
 /Exercises/ArtifactRepoManagerWithNexus/java-gradle-app/.DS_Store
 
-# Ignore Gradle build folders
+# Ignore Gradle build directory
 /Exercises/ArtifactRepoManagerWithNexus/java-gradle-app/build/
 
 # Ignore Gradle cache files
