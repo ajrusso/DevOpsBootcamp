@@ -75,3 +75,6 @@
 
 # Ignore Gradle cache files
 /Exercises/ContainersWithDocker/docker-exercises/.gradle*
+
+# Ignore Gradle binary directory
+/Exercises/ContainersWithDocker/docker-exercises/bin/
