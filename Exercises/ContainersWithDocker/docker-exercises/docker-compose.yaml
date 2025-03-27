@@ -8,6 +8,11 @@ services:
       - MYSQL_USER=user
       - MYSQL_PASSWORD=password
       - MYSQL_DATABASE=mysqldb
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     networks:
       - mysql-network
   
@@ -26,16 +31,16 @@ services:
 
   my-app:
       image: 307946634191.dkr.ecr.us-east-1.amazonaws.com/my-app:1.0
-
       ports: 
         - 8080:8080
-      
       environment:
         - DB_USER=user
         - DB_PWD=password
         - DB_SERVER=mysql
         - DB_NAME=mysqldb
-      
+      depends_on:
+        mysql:
+          condition: service_healthy
       networks:
         - mysql-network
 
