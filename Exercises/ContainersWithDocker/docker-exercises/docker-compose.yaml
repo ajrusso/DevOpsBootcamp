@@ -15,6 +15,8 @@ services:
       retries: 5
     networks:
       - mysql-network
+    volumes:
+      - mysql-data:/var/lib/mysql
   
   phpmyadmin:
     image: phpmyadmin
@@ -47,3 +49,7 @@ services:
 networks:
   mysql-network:
     driver: bridge
+
+volumes:
+  mysql-data:
+    driver: local
