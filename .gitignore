@@ -65,3 +65,16 @@
 
 # Ignore Maven build output
 /Exercises/ArtifactRepoManagerWithNexus/java-maven-app/target/
+
+########################
+# Containers w/ Docker #
+########################
+
+# Ignore Gradle build directory
+/Exercises/ContainersWithDocker/docker-exercises/build/
+
+# Ignore Gradle cache files
+/Exercises/ContainersWithDocker/docker-exercises/.gradle*
+
+# Ignore Gradle binary directory
+/Exercises/ContainersWithDocker/docker-exercises/bin/
