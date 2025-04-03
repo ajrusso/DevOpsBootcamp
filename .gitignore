@@ -85,7 +85,7 @@
 
 # Ignore NodeJs dependancies directory
 /Exercises/BuildAutomationCICDWithJenkins/jenkins-exercises/app/node_modules
-de
+
 # Ignore DS Store
 /Exercises/BuildAutomationCICDWithJenkins/jenkins-exercises/*.DS_Store
 
