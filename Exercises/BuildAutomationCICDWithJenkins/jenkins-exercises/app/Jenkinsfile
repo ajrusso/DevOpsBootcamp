@@ -1,17 +1,37 @@
+def gv
+
 pipeline {
     agent any
     stages {
-        stage("test") {
+        stage('Init') {
             steps {
                 script {
-                    echo "Testing application..."
+                    echo 'Initializing...'
+                    gv = load 'script.groovy'
+                    sh 'npm -v'
+                    sh 'npm version minor --no-git-tag-version'
+                    env.VERSION = '1.0.1'
                 }
             }
         }
-        stage("build") {
+        stage("Test") {
             steps {
                 script {
-                    echo "Building application..."
+                    gv.testApp
+                }
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    gv.buildDockerImage
+                }
+            }
+        }
+        stage('Commit and Push Changes') {
+            steps {
+                script {
+                    echo 'Commiting and pushing updated version to Git...'
                 }
             }
         }
