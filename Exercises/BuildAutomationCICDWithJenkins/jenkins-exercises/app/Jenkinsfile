@@ -1,3 +1,6 @@
+#!/user/bin/env groovy
+
+@Library('jenkins-shared-library')
 def gv
 
 pipeline {
@@ -23,10 +26,14 @@ pipeline {
                 }
             }
         }
-        stage('Build Docker Image') {
+        stage('Build & Push Docker Image') {
             steps {
                 script {
-                    gv.buildDockerImage()
+                    dir('Exercises/BuildAutomationCICDWithJenkins/jenkins-exercises/app') {
+                        dockerBuild('ajrusso/devops_bootcamp')
+                        dockerLogin()
+                        dockerPush('ajrusso/devops_bootcamp')
+                    }
                 }
             }
         }
