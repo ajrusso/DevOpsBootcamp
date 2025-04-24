@@ -6,31 +6,46 @@ def gv
 pipeline {
     agent any
     stages {
-        stage('Init') {
+        stage('Initialize') {
             steps {
                 script {
                     echo 'Initializing...'
                     dir('Exercises/BuildAutomationCICDWithJenkins/jenkins-exercises/app') {
                         gv = load 'script.groovy'
-                        sh 'npm version minor --no-git-tag-version'
                     }
                     sh 'npm -v'
-                    env.VERSION = '1.0.0'
                 }
             }
         }
-        stage("Test") {
+        stage("Increment Version") {
             steps {
                 script {
-                    gv.testApp()
+                   npmIncPatchVer()
+                   def version = nodeGetVer()
+                   env.IMAGE_NAME =  "$version-$BUILD_NUMBER"
                 }
             }
         }
-        stage('Build & Push Docker Image') {
+        stage("Test Application") {
+            steps {
+                script {
+                    npmTestApp()
+                }
+            }
+        }
+        stage('Build Docker Image') {
             steps {
                 script {
                     dir('Exercises/BuildAutomationCICDWithJenkins/jenkins-exercises/app') {
                         dockerBuild('ajrusso/devops_bootcamp')
+                    }
+                }
+            }
+        }
+        stage('Push Docker Image') {
+            steps {
+                script {
+                    dir('Exercises/BuildAutomationCICDWithJenkins/jenkins-exercises/app') {
                         dockerLogin()
                         dockerPush('ajrusso/devops_bootcamp')
                     }
