@@ -56,10 +56,22 @@ pipeline {
                 }
             }
         }
-        stage('Commit and Push Git Changes') {
+        stage('Deploy') {
+            when {
+                expression {
+                    BRANCH_NAME == "main"
+                }
+            }
             steps {
                 script {
-                    echo 'Commiting and pushing updated version to Git...'
+                    echo 'Deploying Docker image...'
+                }
+            }
+        }
+        stage('Commit Version Update') {
+            steps {
+                script {
+                    gv.commitVersion()
                 }
             }
         }
