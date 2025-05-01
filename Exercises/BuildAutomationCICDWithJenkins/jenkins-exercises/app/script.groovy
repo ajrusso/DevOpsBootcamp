@@ -22,13 +22,14 @@ def commitVersion() {
     withCredentials([usernamePassword(credentialsId: 'github-token', passwordVariable: 'TOKEN', usernameVariable: 'USER')]) {
         sh 'git config --global user.email "jenkins@example.com"'
         sh 'git config --global user.name "jenkins"'
+        sh "git checkout ${env.BRANCH_NAME}"
         sh 'git status'
         sh 'git branch'
         sh 'git config --list'
-        sh "git remote set-url origin https://$USER:$TOKEN@github.com/ajrusso/DevOpsBootcamp.git"
+        sh "git remote set-url origin https://\$USER:\$TOKEN@github.com/ajrusso/DevOpsBootcamp.git"
         sh 'git add .'
         sh 'git commit -m "ci: versionbump"'
-        sh 'git push origin feature/BuildAutomation'
+        sh "git push origin ${env.BRANCH_NAME}"
     }
 }
 
