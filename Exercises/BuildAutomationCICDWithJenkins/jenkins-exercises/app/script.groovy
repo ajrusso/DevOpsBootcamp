@@ -19,13 +19,13 @@ def buildDockerImage() {
 
 def commitVersion() {
     echo 'Commiting and pushing updated version to Git...'
-    withCredentials([usernamePassword(credentialsId: 'github-credentials', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
+    withCredentials([usernamePassword(credentialsId: 'github-token', passwordVariable: 'TOKEN', usernameVariable: 'USER')]) {
         sh 'git config --global user.email "jenkins@example.com"'
         sh 'git config --global user.name "jenkins"'
         sh 'git status'
         sh 'git branch'
         sh 'git config --list'
-        sh "git remote set-url origin https://$USER:$PASS@github.com/ajrusso/DevOpsBootcamp.git"
+        sh "git remote set-url origin https://$USER:$TOKEN@github.com/ajrusso/DevOpsBootcamp.git"
         sh 'git add .'
         sh 'git commit -m "ci: versionbump"'
         sh 'git push origin HEAD:feature/BuildAutomation'
