@@ -1,0 +1,11 @@
+services:
+  jenkins-app:
+    image: 307946634191.dkr.ecr.us-east-1.amazonaws.com/jenkins-app:1.0
+    ports:
+      - 3000:3000
+    networks:
+      - jenkins-network
+
+networks:
+  jenkins-network:
+    driver: bridge

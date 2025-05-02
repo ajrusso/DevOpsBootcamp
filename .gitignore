@@ -78,3 +78,16 @@
 
 # Ignore Gradle binary directory
 /Exercises/ContainersWithDocker/docker-exercises/bin/
+
+#######################################
+# Build Automation & CI/CD w/ Jenkens #
+#######################################
+
+# Ignore NodeJs dependancies directory
+/Exercises/BuildAutomationCICDWithJenkins/jenkins-exercises/app/node_modules
+
+# Ignore DS Store
+/Exercises/BuildAutomationCICDWithJenkins/jenkins-exercises/app/*.DS_Store
+
+# Ignore NodeJs compressed archive file
+/Exercises/BuildAutomationCICDWithJenkins/jenkins-exercises/app/*tgz

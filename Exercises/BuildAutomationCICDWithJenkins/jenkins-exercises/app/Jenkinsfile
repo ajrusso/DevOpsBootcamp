@@ -1,0 +1,79 @@
+#!/user/bin/env groovy
+
+@Library('jenkins-shared-library')
+def gv
+
+pipeline {
+    agent any
+    stages {
+        stage('Initialize') {
+            steps {
+                script {
+                    echo 'Initializing...'
+                    dir('Exercises/BuildAutomationCICDWithJenkins/jenkins-exercises/app') {
+                        gv = load 'script.groovy'
+                    }
+                    sh 'npm -v'
+                }
+            }
+        }
+        stage("Increment Version") {
+            steps {
+                script {
+                    dir('Exercises/BuildAutomationCICDWithJenkins/jenkins-exercises/app') {
+                        npmIncPatchVer()
+                        def version = nodeGetVer()
+                        env.IMAGE_NAME =  "$version-$BUILD_NUMBER"
+                    }
+                }
+            }
+        }
+        stage("Test Application") {
+            steps {
+                script {
+                    dir('Exercises/BuildAutomationCICDWithJenkins/jenkins-exercises/app') {
+                        npmTestApp()
+                    }
+                }
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    dir('Exercises/BuildAutomationCICDWithJenkins/jenkins-exercises/app') {
+                        dockerBuild('ajrusso/devops_bootcamp')
+                    }
+                }
+            }
+        }
+        stage('Push Docker Image') {
+            steps {
+                script {
+                    dir('Exercises/BuildAutomationCICDWithJenkins/jenkins-exercises/app') {
+                        dockerLogin()
+                        dockerPush('ajrusso/devops_bootcamp')
+                    }
+                }
+            }
+        }
+        stage('Deploy') {
+            when {
+                expression {
+                    BRANCH_NAME == "main"
+                }
+            }
+            steps {
+                script {
+                    echo 'Deploying Docker image...'
+                }
+            }
+        }
+        stage('Commit Version Update') {
+            steps {
+                script {
+                    gv.commitVersion()
+                }
+            }
+        }
+    }
+}
