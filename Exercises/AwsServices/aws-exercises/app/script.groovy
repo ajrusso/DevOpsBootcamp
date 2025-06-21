@@ -29,9 +29,9 @@ def deployDockerImage(String ec2Host, String projectDir) {
                 set -e
                 cd ${projectDir}
                 git pull origin feature/AwsServices
-                docker-compose pull
-                docker-compose down
-                docker-compose up -d
+                docker compose pull
+                docker compose down
+                docker compose up -d
             EOF
         """
     }
