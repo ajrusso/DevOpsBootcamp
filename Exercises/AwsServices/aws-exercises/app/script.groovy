@@ -18,8 +18,8 @@ def buildDockerImage() {
 }
 
 def deployDockerImage(String ec2Host, String projectDir) {
-    if (env.BRANCH_NAME != 'feature/AwsServices') {
-        echo "Not on feature/AwsServices branch, skipping deployment."
+    if (env.BRANCH_NAME != 'main') {
+        echo "Not on main branch, skipping deployment."
         return
     }
     echo 'Deploying Docker image'
