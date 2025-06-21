@@ -1,22 +1,3 @@
-def testApp() {
-    dir('Exercises/AwsServices/aws-exercises/app') {
-        echo 'Testing application...'
-        sh 'npm install'
-        sh 'npm test'
-    }
-}
-
-def buildDockerImage() {
-    echo 'Building Docker image...'
-    withCredentials([usernamePassword(credentialsId: 'docker-hub-repo', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
-        dir('Exercises/AwsServices/aws-exercises/app') {
-            sh "docker build -t ajrusso/devops_bootcamp:${env.VERSION} ."
-            sh 'echo $PASS | docker login -u $USER --password-stdin'
-            sh "docker push ajrusso/devops_bootcamp:${env.VERSION}"
-        }
-    }
-}
-
 def deployDockerImage(String ec2Host, String projectDir) {
     if (env.BRANCH_NAME != 'main') {
         echo "Not on main branch, skipping deployment."
