@@ -28,7 +28,7 @@ def deployDockerImage(String ec2Host, String projectDir) {
         ssh -o StrictHostKeyChecking=no ${ec2Host} <<EOF
         set -e
         cd ${projectDir}
-        git pull origin feature/AwsServices
+        git pull origin ${env.BRANCH_NAME}
         docker compose pull
         docker compose down
         docker compose up -d
