@@ -49,7 +49,7 @@ def commitVersion() {
         sh "git remote set-url origin https://\$USER:\$TOKEN@github.com/ajrusso/DevOpsBootcamp.git"
         sh 'git add .'
         sh 'git commit -m "ci: versionbump"'
-        sh "git push origin ${env.BRANCH_NAME}"
+        sh "git push origin HEAD:${env.BRANCH_NAME}"
     }
 }
 
