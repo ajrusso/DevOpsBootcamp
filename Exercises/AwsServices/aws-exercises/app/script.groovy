@@ -25,14 +25,14 @@ def deployDockerImage(String ec2Host, String projectDir) {
     echo 'Deploying Docker image'
     sshagent(['ch9-ec2-ssh-key']) {
         sh """
-            ssh -o StrictHostKeyChecking=no ${ec2Host} << 'EOF'
-                set -e
-                cd ${projectDir}
-                git pull origin feature/AwsServices
-                docker compose pull
-                docker compose down
-                docker compose up -d
-            EOF
+        ssh -o StrictHostKeyChecking=no ${ec2Host} <<EOF
+        set -e
+        cd ${projectDir}
+        git pull origin feature/AwsServices
+        docker compose pull
+        docker compose down
+        docker compose up -d
+        EOF
         """
     }
 
