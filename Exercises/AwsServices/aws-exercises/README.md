@@ -8,8 +8,8 @@ production-ready experience.
 
 ## 🧭 Project Goal
 
-Your company has standardized on **AWS** to reduce multi-cloud overhead. You'll provision 
-infrastructure, configure secure access, and deploy a Dockerized Node.js app via Jenkins automation.
+Your company has standardized on **AWS** to reduce multi-cloud overhead. You'll provision infrastructure,
+configure secure access, and deploy a Dockerized Node.js app via Jenkins automation.
 
 ---
 
