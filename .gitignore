@@ -104,3 +104,8 @@
 
 # Ignore NodeJs compressed archive file
 /Exercises/AwsServices/aws-exercises/app/*tgz
+
+###########################################
+# Container Orchestration with Kubernetes #
+###########################################
+
